@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.black-cover {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), black 80%),
+    url("./unread-image/numur-cover.jpeg");
+  opacity: 0.9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: -350px;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  width: 90%;
+  align-items: baseline;
+  padding: 22px 0;
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto; */
+}
+nav img {
+  color: white;
+}
+.head-menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.head-menu-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.line {
+  height: 20px;
+  border-right: 1px solid white;
+}
+
+.head-menu-1 button {
+  height: 30px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  gap: 10px;
+  opacity: 0.5;
+}
+.head-menu-2 {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: baseline;
+  gap: 15px;
+}
+.head-menu-2 p {
+  opacity: 0.5;
+}
+.head-menu-2 div {
+  height: 41px;
+  border-radius: 20px;
+  background-color: rgb(142, 166, 187);
+  opacity: 0.5;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.head-icons {
+  display: flex;
+  gap: 20px;
+  opacity: 0.5;
+}
