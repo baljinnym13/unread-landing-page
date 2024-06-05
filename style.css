@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-color: antiquewhite;
+  background-color: black;
 }
 header {
   width: 100vw;
@@ -32,7 +33,6 @@ nav {
   padding: 22px 0;
   display: flex;
   justify-content: space-between;
-  /* margin: auto; */
 }
 nav img {
   color: white;
@@ -103,10 +103,25 @@ nav img {
   color: white;
   padding: 45px 0 0 61px;
 }
-.hero-text-1 h5 {
-  font-size: 10px;
+.hero-text-1 h4 {
+  font-size: 18px;
   margin-bottom: 22px;
   color: blue;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 .hero-text-1 h1 {
   font-size: 36px;
@@ -197,6 +212,10 @@ nav img {
 .card7 {
   background-image: url(./unread-image/card7.png);
 }
+.container-big {
+  background-color: aliceblue;
+  border-radius: 0 0 30px 30px;
+}
 .container-artikle {
   width: 70%;
   margin: auto;
@@ -273,7 +292,7 @@ nav img {
 }
 
 .container-prevweeks {
-  width: 90%;
+  width: 70%;
   margin: auto;
 }
 .prevweek-border {
@@ -312,10 +331,11 @@ nav img {
 .content-1 {
   width: 100%;
   display: grid;
-  margin-bottom: 40px;
+  /* margin-bottom: 80px; */
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 271px 128px 235px;
   gap: 20px;
+  padding-bottom: 80px;
 }
 .item {
   background-image: url(./unread-image/numur-cover.jpeg);
@@ -326,7 +346,7 @@ nav img {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 30px;
+
   color: red;
 }
 .item:hover {
@@ -334,13 +354,21 @@ nav img {
   box-shadow: 0 0 10px 1px rgb(93, 89, 89);
 }
 .text {
+  padding: 30px;
   position: relative;
-  filter: blur(10%);
+  background-color: rgba(143, 136, 136, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 0 0 20px 20px;
 }
 .item button {
   position: absolute;
   right: 50px;
   top: -10px;
+  border: none;
+  color: white;
+  background-color: gray;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .big {
   grid-row: 2 span;
@@ -352,7 +380,152 @@ nav img {
   grid-row: 2 span;
 }
 
-@media only screen and (max-width: 1200px) and (min-width: 1025px) {
+footer {
+  background-color: #000;
+  z-index: -2;
+  width: 100%;
+  position: absolute;
+  margin-top: -50px;
+  padding-top: 100px;
+}
+.menuandcontact {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.footerunreadlogo {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.unreadlast {
+  width: 135px;
+  height: 18px;
+  background-image: url("https://unread.today/files/site_meta/b809740220f5b5b4749e697e42df987b.png");
+  background-size: cover;
+  background-position: center;
+}
+.footerbutton {
+  background-image: url(./unread-image/btn-black.png);
+  color: white;
+  width: 323px;
+  height: 90px;
+  border: none;
+  position: relative;
+  font-weight: 500;
+  padding: 21px 80px 27px 28px;
+  border-radius: 18px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.footerbutton > h1 {
+  font-size: 12.6px;
+  opacity: 50%;
+  text-align: left;
+}
+.footerbutton > h2 {
+  font-size: 12.6px;
+  font-weight: 700;
+  text-align: left;
+}
+.arrow {
+  position: absolute;
+  bottom: 30%;
+  right: 8%;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: rgb(0, 120, 248, 0) solid 9px;
+}
+.appstorelogo {
+  display: flex;
+  gap: 20px;
+}
+img {
+  width: 144px;
+  aspect-ratio: auto 144 / 50;
+  height: 50px;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.footertext {
+  width: 650px;
+  height: 404px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footerredac {
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  gap: 30px;
+}
+.copyright {
+  font-size: 10.8px;
+  opacity: 50%;
+}
+.bulan {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.bulancolumn {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 180px;
+  font-size: 12.6px;
+}
+.garchigungu {
+  color: #0078f8;
+  font-weight: 700;
+  font-size: 14.4px;
+}
+.wordhover {
+  opacity: 50%;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.urtuulugchid {
+  margin-top: 30px;
+}
+.zochloh {
+  margin-top: 30px;
+  opacity: 1;
+}
+.socieliconlast {
+  padding: 90px 0;
+  color: rgb(255, 255, 255, 0.2);
+  font-size: 40px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.fa-brands,
+.fab {
+  font-weight: 400;
+}
+.fa-brands,
+.fab {
+  font-family: "Font Awesome 6 Brands";
+}
+/* @media only screen and (max-width: 1200px) and (min-width: 1025px) {
   .container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -380,4 +553,4 @@ nav img {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-flow: dense;
   }
-}
+} */
